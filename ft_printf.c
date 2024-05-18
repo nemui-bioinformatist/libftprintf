@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 10:14:53 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/18 10:58:09 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/18 11:56:52 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int ft_printf_check(char c, args)
 	else if(c == 's')
 		num += ft_treat_str(va_arg(args, char *));
 	else if(c == 'p')
-		num += ft_treat_p(va_arg(args, void *));
+		num += ft_treat_p(va_arg(args, unsigned long long));
 	else if(c == 'u')
 		num += ft_treat_uint(va_arg(args, unsigned long long));
 	else if(c == 'x')
