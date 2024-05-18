@@ -6,70 +6,70 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 11:54:24 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/18 12:55:57 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/18 23:22:51 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "libftprintf.h"
+// # include "libft.h"
+// # include "libftprintf.h"
 
-static char *ft_int_to_base(char *moji, unsigned long long num)
+# include <stdio.h>
+# include <unistd.h>
+
+static int 	ft_putchar(char c)
 {
-	if (num < 16)
-	{
-		if(num % 16 < 10)
-			*moji = num % 16 + '0';
-		else
-			*moji = num % 16 + 'a';
-		moji++;
-	}
-	else if(num >= 16)
-	{
-		num = num / 16;
-		ft_int_to_base(moji, num);
-		if(num % 16 < 10)
-			*moji = num % 16 + '0';
-		else
-			*moji = num % 16 + 'a';
-		moji++;
-	}
-	*moji = '\0';
-	return(moji);
+	write(1, &c, 1);
+	return (1);
 }
 
-static char *ft_point_base(unsigned long long p)
+static char base_change(unsigned long long n)
 {
-	char *moji;
+	if (n % 16 > 9)
+		return(n % 16 - 10 + 'A');
+	else
+		return(n % 16 + '0');
+}
+static int	ft_putnbr_base(unsigned long long n)
+{
 	int count;
-	unsigned long long num;
 
 	count = 0;
-	num = p;
-	if (p < 16)
-		count++;
-	else if(p >= 16)
+	if (n <= 16)
+		count += ft_putchar(base_change(n));
+	else
 	{
-		p = p / 16;
-		ft_point_base(num);
-		count++;
+		count += ft_putnbr_base(n / 16);
+		count += ft_putchar(base_change(n));
 	}
-	moji = (char *)malloc((count + 1) * sizeof(char));
-	if (!moji)
-		return(NULL);
-	ft_int_to_base(moji, num);
-	return(moji);	
+	return (count);
+}
+
+static int ft_point_base(unsigned long long p)
+{
+	int num;
+
+	write(1, "0x", 2);
+	num = 2;
+	num += ft_putnbr_base(p);
+	return(num);
 }
 
 int ft_treat_p(unsigned long long p)
 {
-	int num;
-	char *moji;
-	moji = ft_point_base(p);
-	if (!moji)
-		return(0);
-	write(1, "0x", 2);
-	num = 2;
-	num += ft_putstr_count(moji);
-	free(moji);
-	return(moji);
+	return(ft_point_base(p));
+}
+
+int main()
+{
+    // テストケース
+    unsigned long long values[] = {0, 1, 15, 16, 255, 256, 4095, 4096, 123456789, 0xFFFFFFFFFFFFFFFF};
+    size_t num_values = sizeof(values) / sizeof(values[0]);
+
+    for (size_t i = 0; i < num_values; i++) {
+        int count = ft_point_base(values[i]);
+        write(1, "\n", 1);
+        printf("Printed %d characters\n", count);
+    }
+
+    return 0;
 }

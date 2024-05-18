@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_treat_str.c                                     :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/18 11:43:48 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/18 23:20:42 by rnomura          ###   ########.fr       */
+/*   Created: 2024/05/18 20:17:06 by rnomura           #+#    #+#             */
+/*   Updated: 2024/05/18 20:50:44 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_treat_str(char *str)
+int 	ft_putchar(char c)
 {
-	return(ft_putstr(str));
+	write(1, &c, 1);
+	return (1);
 }
