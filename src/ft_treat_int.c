@@ -6,12 +6,12 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 11:07:12 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/19 16:23:07 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/19 22:59:38 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 // #include <stdio.h>
 // #include <stdlib.h>
@@ -83,27 +83,27 @@
 // 	return(count);
 // }
 
-int ft_treat_int(int n)
+int	ft_treat_int(int n)
 {
-	char *moji;
-	int num;
+	char	*moji;
+	int		num;
 
 	num = 0;
 	moji = ft_itoa(n);
 	if (!moji)
 		return (0);
-	num = ft_putstr(moji);	
+	num = ft_putstr(moji);
 	free(moji);
-	return(num);
+	return (num);
 }
 
 // int main()
 // {
-//     printf("Test 1: %d\n", ft_treat_int(1234));       // 予想される出力: "1234", 戻り値: 4
-//     printf("Test 2: %d\n", ft_treat_int(-5678));      // 予想される出力: "-5678", 戻り値: 5
-//     printf("Test 3: %d\n", ft_treat_int(0));          // 予想される出力: "0", 戻り値: 1
-//     printf("Test 4: %d\n", ft_treat_int(2147483647)); // 予想される出力: "2147483647", 戻り値: 10
-//     printf("Test 5: %d\n", ft_treat_int(-2147483648));// 予想される出力: "-2147483648", 戻り値: 11
+//     printf("Test 1: %d\n", ft_treat_int(1234));       // 
+//     printf("Test 2: %d\n", ft_treat_int(-5678));      // 
+//     printf("Test 3: %d\n", ft_treat_int(0));          // 
+//     printf("Test 4: %d\n", ft_treat_int(2147483647)); // 
+//     printf("Test 5: %d\n", ft_treat_int(-2147483648));// 
 
 //     return 0;
 // }

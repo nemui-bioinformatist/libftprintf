@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 22:26:41 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/18 22:26:47 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/19 20:11:09 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ static void	getdigitstoarray(char *arr, size_t count, size_t sign,
 
 char	*ft_itoa(int n)
 {
-	size_t		sign;
-	size_t		count;
-	long long	num;
-	char		*arr;
+	size_t sign;
+	size_t count;
+	long long num;
+	char *arr;
 
 	count = 0;
 	sign = 0;

@@ -6,12 +6,12 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 12:42:30 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/19 16:17:15 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/19 22:55:38 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
-# include "libftprintf.h"
+#include "ft_printf.h"
+#include "libft.h"
 
 // # include <stdio.h>
 // # include <unistd.h>
@@ -22,40 +22,40 @@
 // 	return (1);
 // }
 
-static char base_change_X(unsigned int n)
+static char	base_change_lx(unsigned int n)
 {
 	if (n % 16 > 9)
-		return(n % 16 - 10 + 'A');
+		return (n % 16 - 10 + 'A');
 	else
-		return(n % 16 + '0');
+		return (n % 16 + '0');
 }
 
-static char base_change_x(unsigned int n)
+static char	base_change_x(unsigned int n)
 {
 	if (n % 16 > 9)
-		return(n % 16 - 10 + 'a');
+		return (n % 16 - 10 + 'a');
 	else
-		return(n % 16 + '0');
+		return (n % 16 + '0');
 }
 
-static int	ft_putnbr_base_X(unsigned int n)
+static int	ft_putnbr_base_lx(unsigned int n)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (n <= 15)
-		count += ft_putchar(base_change_X(n));
+		count += ft_putchar(base_change_lx(n));
 	else
 	{
-		count += ft_putnbr_base_X(n / 16);
-		count += ft_putchar(base_change_X(n));
+		count += ft_putnbr_base_lx(n / 16);
+		count += ft_putchar(base_change_lx(n));
 	}
 	return (count);
 }
 
 static int	ft_putnbr_base_x(unsigned int n)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (n <= 15)
@@ -68,15 +68,15 @@ static int	ft_putnbr_base_x(unsigned int n)
 	return (count);
 }
 
-int ft_treat_hexa(unsigned int n, char c)
+int	ft_treat_hexa(unsigned int n, char c)
 {
-    int num;
+	int	num;
 
-    if (c == 'X')
-        num = ft_putnbr_base_X(n);
-    else
-        num = ft_putnbr_base_x(n);
-    return(num);
+	if (c == 'X')
+		num = ft_putnbr_base_lx(n);
+	else
+		num = ft_putnbr_base_x(n);
+	return (num);
 }
 
 // int main() {

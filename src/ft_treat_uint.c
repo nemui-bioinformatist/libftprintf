@@ -6,12 +6,12 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 22:53:26 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/19 16:16:32 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/19 22:56:44 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include "libft.h"
-#include "libftprintf.h"
 
 // # include <stdio.h>
 // # include <unistd.h>
@@ -37,15 +37,16 @@
 // 	return (count);
 // }
 
-int ft_treat_uint(unsigned long long n)
+int	ft_treat_uint(unsigned int n)
 {
-    return(ft_putnbr(n));
+	return (ft_putnbr(n));
 }
 
 // int main()
 // {
 //     // テストケース
-//     unsigned long long values[] = {0, 1, 15, 16, 255, 256, 4095, 4096, 123456789, 0xFFFFFFFFFFFFFFFF};
+//     unsigned long long values[] = {0, 1, 15, 16, 255, 256, 4095, 4096,
+	// 123456789, 0xFFFFFFFFFFFFFFFF};
 //     size_t num_values = sizeof(values) / sizeof(values[0]);
 
 //     for (size_t i = 0; i < num_values; i++) {
@@ -54,5 +55,5 @@ int ft_treat_uint(unsigned long long n)
 //         printf("Printed %d characters\n", count);
 //     }
 
-//     return 0;
+//     return (0);
 // }

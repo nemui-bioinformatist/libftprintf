@@ -6,21 +6,21 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 20:55:30 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/19 14:36:16 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/19 20:11:23 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_putstr(char *s)
+int	ft_putstr(char *s)
 {
 	int count;
 
 	count = 0;
-	while(s && *s)
+	while (s && *s)
 	{
 		write(1, s++, 1);
 		count++;
 	}
-	return(count);
+	return (count);
 }
