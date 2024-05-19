@@ -29,9 +29,9 @@ static int ft_printf_check(char c, args)
 	else if(c == 'u')
 		num += ft_treat_uint(va_arg(args, unsigned long long));
 	else if(c == 'x')
-		num += ft_treat_hexa(va_arg(args, unsigned int), 'c');
+		num += ft_treat_hexa(va_arg(args, unsigned int), c);
 	else if(c == 'X')
-		num += ft_treat_hexa(va_arg(args, unsigned int), 'C');
+		num += ft_treat_hexa(va_arg(args, unsigned int), c);
 	else if(c == '%')
 	{
 		num += 1;

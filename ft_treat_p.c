@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 11:54:24 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/18 23:22:51 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/19 12:16:12 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,19 @@ static int 	ft_putchar(char c)
 	return (1);
 }
 
-static char base_change(unsigned long long n)
+char base_change(unsigned long long n)
 {
 	if (n % 16 > 9)
-		return(n % 16 - 10 + 'A');
+		return(n % 16 - 10 + 'a');
 	else
 		return(n % 16 + '0');
 }
-static int	ft_putnbr_base(unsigned long long n)
+int	ft_putnbr_base(unsigned long long n)
 {
 	int count;
 
 	count = 0;
-	if (n <= 16)
+	if (n <= 15)
 		count += ft_putchar(base_change(n));
 	else
 	{
@@ -62,7 +62,7 @@ int ft_treat_p(unsigned long long p)
 int main()
 {
     // テストケース
-    unsigned long long values[] = {0, 1, 15, 16, 255, 256, 4095, 4096, 123456789, 0xFFFFFFFFFFFFFFFF};
+    unsigned long long values[] = {0, 1, 15, 16, 255, 256, 4095, 12345,  4096, 123456789, 0xFFFFFFFFFFFFFFFF};
     size_t num_values = sizeof(values) / sizeof(values[0]);
 
     for (size_t i = 0; i < num_values; i++) {
