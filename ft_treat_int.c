@@ -6,12 +6,12 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 11:07:12 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/18 23:20:35 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/19 16:23:07 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include "libftprintf.h"
+#include "libftprintf.h"
 
 // #include <stdio.h>
 // #include <stdlib.h>

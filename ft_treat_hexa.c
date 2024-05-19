@@ -6,15 +6,15 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 12:42:30 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/19 12:42:34 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/19 16:17:15 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// # include "libft.h"
-// # include "libftprintf.h"
+# include "libft.h"
+# include "libftprintf.h"
 
-# include <stdio.h>
-# include <unistd.h>
+// # include <stdio.h>
+// # include <unistd.h>
 
 // static int 	ft_putchar(char c)
 // {
@@ -22,7 +22,7 @@
 // 	return (1);
 // }
 
-char base_change_X(unsigned int n)
+static char base_change_X(unsigned int n)
 {
 	if (n % 16 > 9)
 		return(n % 16 - 10 + 'A');
@@ -30,7 +30,7 @@ char base_change_X(unsigned int n)
 		return(n % 16 + '0');
 }
 
-char base_change_x(unsigned int n)
+static char base_change_x(unsigned int n)
 {
 	if (n % 16 > 9)
 		return(n % 16 - 10 + 'a');
@@ -38,7 +38,7 @@ char base_change_x(unsigned int n)
 		return(n % 16 + '0');
 }
 
-int	ft_putnbr_base_X(unsigned int n)
+static int	ft_putnbr_base_X(unsigned int n)
 {
 	int count;
 
@@ -53,7 +53,7 @@ int	ft_putnbr_base_X(unsigned int n)
 	return (count);
 }
 
-int	ft_putnbr_base_x(unsigned int n)
+static int	ft_putnbr_base_x(unsigned int n)
 {
 	int count;
 
