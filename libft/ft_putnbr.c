@@ -14,7 +14,7 @@
 
 int	ft_putnbr(unsigned int n)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (n <= 9)

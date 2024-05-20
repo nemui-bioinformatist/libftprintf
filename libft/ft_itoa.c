@@ -42,10 +42,10 @@ static void	getdigitstoarray(char *arr, size_t count, size_t sign,
 
 char	*ft_itoa(int n)
 {
-	size_t sign;
-	size_t count;
-	long long num;
-	char *arr;
+	size_t		sign;
+	size_t		count;
+	long long	num;
+	char		*arr;
 
 	count = 0;
 	sign = 0;

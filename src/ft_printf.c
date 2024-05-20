@@ -82,12 +82,17 @@ int	ft_printf(const char *input, ...)
 // {
 // 	int a;
 // 	int b;
-// 	a = ft_printf(" %u ", LONG_MAX);
+// 	a = ft_printf(" %u ", 12345678);
 // 	printf("  this is len:");
 // 	printf("%d\n" , a);
 
-// 	b = printf(" %u ", LONG_MAX);
+// 	b = printf(" %u ", 12345678);
 // 	printf("  this is len:");
 // 	printf("%d\n" , b);
 // 	return (0);
+// }
+
+// __attribute__((destructor))
+// static void destructor() {
+//     system("leaks -q a.out");
 // }
