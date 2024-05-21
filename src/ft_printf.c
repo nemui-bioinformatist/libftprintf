@@ -6,7 +6,7 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 10:14:53 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/19 22:47:14 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/21 20:56:04 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,10 +89,5 @@ int	ft_printf(const char *input, ...)
 // 	b = printf(" %u ", 12345678);
 // 	printf("  this is len:");
 // 	printf("%d\n" , b);
-// 	return (0);
-// }
-
-// __attribute__((destructor))
-// static void destructor() {
-//     system("leaks -q a.out");
+// 	system("leaks a.out");
 // }

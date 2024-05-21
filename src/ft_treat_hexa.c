@@ -6,21 +6,12 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 12:42:30 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/19 22:55:38 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/21 20:57:14 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
-
-// # include <stdio.h>
-// # include <unistd.h>
-
-// static int 	ft_putchar(char c)
-// {
-// 	write(1, &c, 1);
-// 	return (1);
-// }
 
 static char	base_change_lx(unsigned int n)
 {

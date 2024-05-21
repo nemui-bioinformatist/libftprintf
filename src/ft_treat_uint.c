@@ -6,36 +6,12 @@
 /*   By: rnomura <rnomura@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 22:53:26 by rnomura           #+#    #+#             */
-/*   Updated: 2024/05/19 22:56:44 by rnomura          ###   ########.fr       */
+/*   Updated: 2024/05/21 20:58:23 by rnomura          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft.h"
-
-// # include <stdio.h>
-// # include <unistd.h>
-
-// int 	ft_putchar(char c)
-// {
-// 	write(1, &c, 1);
-// 	return (1);
-// }
-
-// int	ft_putnbr(unsigned long long n)
-// {
-// 	int count;
-
-// 	count = 0;
-// 	if (n <= 9)
-// 		count += ft_putchar(n + '0');
-// 	else
-// 	{
-// 		count += ft_putnbr(n / 10);
-// 		count += ft_putchar(n % 10 + '0');
-// 	}
-// 	return (count);
-// }
 
 int	ft_treat_uint(unsigned int n)
 {
